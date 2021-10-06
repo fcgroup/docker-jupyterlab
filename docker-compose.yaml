@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  jupyter:
+    build:
+      context: ./
+    volumes:
+      # This user appears to be an artifact from an upstream image... whatever.
+      - ./work:/home/jovyan/work
+    ports:
+      - '8888:8888'
